@@ -11,8 +11,8 @@ import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
 const GenerateSustainabilityRecommendationsInputSchema = z.object({
-  businessDescription: z.string().describe('A description of the user\u0027s business, including its industry, size, and current sustainability practices.'),
-  goals: z.string().describe('The user\u0027s sustainability goals.'),
+  businessDescription: z.string().describe('A description of the user\'s business, including its industry, size, and current sustainability practices.'),
+  goals: z.string().describe('The user\'s sustainability goals.'),
 });
 export type GenerateSustainabilityRecommendationsInput = z.infer<typeof GenerateSustainabilityRecommendationsInputSchema>;
 
@@ -23,7 +23,7 @@ const GenerateSustainabilityRecommendationsOutputSchema = z.object({
       recommendation: z.string().describe('A specific, actionable recommendation for improving sustainability in the specified area.'),
       impact: z.string().describe('A description of the potential environmental and/or economic impact of implementing the recommendation.'),
     })
-  ).describe('A list of sustainability recommendations for the user\u0027s business.'),
+  ).describe('A list of sustainability recommendations for the user\'s business.'),
 });
 export type GenerateSustainabilityRecommendationsOutput = z.infer<typeof GenerateSustainabilityRecommendationsOutputSchema>;
 
@@ -42,7 +42,7 @@ const prompt = ai.definePrompt({
   Business Description: {{{businessDescription}}}
   Sustainability Goals: {{{goals}}}
 
-  Format your output as a JSON array of objects, where each object has the keys \"area\", \"recommendation\", and \"impact\".  The \"area\" is the area of the business the recommendation applies to (e.g., energy, waste, supply chain). The \"recommendation\" is a specific, actionable recommendation for improving sustainability in the specified area. The \"impact\" is a description of the potential environmental and/or economic impact of implementing the recommendation.
+  Format your output as a JSON array of objects, where each object has the keys "area", "recommendation", and "impact".  The "area" is the area of the business the recommendation applies to (e.g., energy, waste, supply chain). The "recommendation" is a specific, actionable recommendation for improving sustainability in the specified area. The "impact" is a description of the potential environmental and/or economic impact of implementing the recommendation.
   `,
 });
 

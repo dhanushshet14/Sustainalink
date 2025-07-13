@@ -31,7 +31,7 @@ import { useToast } from '@/hooks/use-toast';
 import { useState, useTransition } from 'react';
 import { getAIRecommendations } from '@/lib/actions';
 import type { GenerateSustainabilityRecommendationsOutput } from '@/ai/flows/generate-sustainability-recommendations';
-import { Loader2, Sparkles, Target, Trees } from 'lucide-react';
+import { Loader2, Sparkles, Target, Trees, Zap } from 'lucide-react';
 
 const formSchema = z.object({
   businessDescription: z.string().min(20, {
