@@ -1,13 +1,12 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Leaf, Menu } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 export function Navbar() {
   const navLinks = [
-    { href: '#features', label: 'Features' },
+    { href: '/#features', label: 'Features' },
     { href: '/dashboard', label: 'Dashboard' },
-    { href: '/dashboard/product-journey', label: 'Product' },
   ];
 
   return (

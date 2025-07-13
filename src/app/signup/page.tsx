@@ -1,5 +1,5 @@
 import { SignUpForm } from '@/components/auth/SignUpForm';
-import { Navbar } from '@/components/common/Navbar';
+import { Navbar } from '@/app/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 
 export default function SignUpPage() {
