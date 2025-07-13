@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -18,6 +19,8 @@ import {
   Trophy,
   LogOut,
   Leaf,
+  User,
+  Settings,
 } from 'lucide-react';
 
 export function AppSidebar() {
@@ -28,6 +31,7 @@ export function AppSidebar() {
     { href: '/supplier', label: 'Supplier Profile', icon: <Truck /> },
     { href: '/product-journey', label: 'Product Journey', icon: <Package /> },
     { href: '/rewards', label: 'Rewards', icon: <Trophy /> },
+    { href: '/dashboard/profile', label: 'Profile & Settings', icon: <Settings /> },
   ];
 
   return (
