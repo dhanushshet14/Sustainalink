@@ -28,16 +28,16 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-background">
       <Navbar />
       <main className="flex-1">
         <section className="relative w-full overflow-hidden bg-card py-20 md:py-32 lg:py-40">
           <div className="container mx-auto px-4 text-center animate-in fade-in-0 slide-in-from-bottom-12 duration-1000">
             <div
-              className="absolute inset-0 -z-10 bg-grid-slate-900/[0.04] bg-[10px_10px] [mask-image:linear-gradient(0deg,transparent,#F0F4F5,transparent)] dark:bg-grid-slate-400/[0.05]"
+              className="absolute inset-0 -z-10 bg-grid-slate-900/[0.04] bg-[10px_10px] [mask-image:linear-gradient(0deg,transparent,theme(colors.card),transparent)] dark:bg-grid-slate-400/[0.05]"
               style={{ backgroundSize: '30px 30px' }}
             ></div>
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
+             <h1 className="font-headline text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-shine bg-[200%_auto] sm:text-5xl md:text-6xl lg:text-7xl">
               Forge a Sustainable Future
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
@@ -45,7 +45,7 @@ export default function LandingPage() {
               environmental and social impact with cutting-edge technology.
             </p>
             <div className="mt-10 flex justify-center gap-4">
-              <Button asChild size="lg" className="transition-transform hover:scale-105">
+              <Button asChild size="lg" className="transition-transform hover:scale-105 shadow-lg shadow-primary/20">
                 <Link href="/signup">Get Started</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="transition-transform hover:scale-105">
@@ -101,7 +101,7 @@ export default function LandingPage() {
               Join the growing community of businesses committed to sustainability and start making a measurable impact today.
             </p>
             <div className="mt-8">
-              <Button asChild size="lg" className="transition-transform hover:scale-105">
+              <Button asChild size="lg" className="transition-transform hover:scale-105 shadow-lg shadow-primary/20">
                 <Link href="/signup">Start Your Free Trial</Link>
               </Button>
             </div>

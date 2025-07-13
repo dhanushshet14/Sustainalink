@@ -19,7 +19,6 @@ import {
   Trophy,
   LogOut,
   Leaf,
-  User,
   Settings,
 } from 'lucide-react';
 
@@ -28,9 +27,9 @@ export function AppSidebar() {
 
   const menuItems = [
     { href: '/dashboard', label: 'Dashboard', icon: <LayoutDashboard /> },
-    { href: '/supplier', label: 'Supplier Profile', icon: <Truck /> },
-    { href: '/product-journey', label: 'Product Journey', icon: <Package /> },
-    { href: '/rewards', label: 'Rewards', icon: <Trophy /> },
+    { href: '/dashboard/supplier', label: 'Supplier Profile', icon: <Truck /> },
+    { href: '/dashboard/product-journey', label: 'Product Journey', icon: <Package /> },
+    { href: '/dashboard/rewards', label: 'Rewards', icon: <Trophy /> },
     { href: '/dashboard/profile', label: 'Profile & Settings', icon: <Settings /> },
   ];
 
