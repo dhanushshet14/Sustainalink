@@ -2,9 +2,10 @@ import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, Leaf, LineChart, Zap } from 'lucide-react';
-import Image from 'next/image';
+import { Leaf, LineChart, Zap } from 'lucide-react';
 import Link from 'next/link';
+import { SupplyChainStepper } from '@/components/landing/SupplyChainStepper';
+import { TestimonialsCarousel } from '@/components/landing/TestimonialsCarousel';
 
 export default function LandingPage() {
   const features = [
@@ -31,7 +32,7 @@ export default function LandingPage() {
       <Navbar />
       <main className="flex-1">
         <section className="relative w-full overflow-hidden bg-card py-20 md:py-32 lg:py-40">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-4 text-center animate-in fade-in-0 slide-in-from-bottom-12 duration-1000">
             <div
               className="absolute inset-0 -z-10 bg-grid-slate-900/[0.04] bg-[10px_10px] [mask-image:linear-gradient(0deg,transparent,#F0F4F5,transparent)] dark:bg-grid-slate-400/[0.05]"
               style={{ backgroundSize: '30px 30px' }}
@@ -87,44 +88,26 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="w-full bg-card py-20 md:py-32">
-          <div className="container mx-auto grid items-center gap-6 px-4 md:grid-cols-2 md:gap-10">
-            <div className="space-y-4">
-              <h2 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl/tight">
-                Track Your Product's Journey, From Source to Shelf
-              </h2>
-              <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                Our platform provides full transparency into your supply chain.
-                Scan a QR code to see the complete journey of a product,
-                ensuring ethical and sustainable sourcing at every step.
-              </p>
-              <ul className="grid gap-2">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-accent" />
-                  <span>Verify supplier credentials</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-accent" />
-                  <span>Monitor environmental impact</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-accent" />
-                  <span>Engage consumers with transparent data</span>
-                </li>
-              </ul>
-            </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="https://placehold.co/550x310.png"
-                width={550}
-                height={310}
-                alt="Product Journey"
-                data-ai-hint="supply chain logistics"
-                className="overflow-hidden rounded-xl object-cover"
-              />
+        <SupplyChainStepper />
+        
+        <TestimonialsCarousel />
+
+        <section className="w-full bg-primary/10 py-20 md:py-32">
+          <div className="container mx-auto text-center">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-muted-foreground md:text-lg">
+              Join the growing community of businesses committed to sustainability and start making a measurable impact today.
+            </p>
+            <div className="mt-8">
+              <Button asChild size="lg" className="transition-transform hover:scale-105">
+                <Link href="/signup">Start Your Free Trial</Link>
+              </Button>
             </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </div>
