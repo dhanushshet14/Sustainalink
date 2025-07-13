@@ -1,3 +1,4 @@
+
 import { ProductJourney } from '@/components/product/ProductJourney';
 import { QRScanner } from '@/components/product/QRScanner';
 
